@@ -1,1 +1,107 @@
 @charset "UTF-8";
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  /*html 要素のフォントサイズが「16px」のときは、1rem=16px*/
+  font-family: Yu Gothic;
+  box-sizing: border-box;
+  /*要素の幅と高さにpaddingとborderを含める*/
+}
+
+ul,
+li,
+ol {
+  list-style-type: none;
+  /*リストのマークなし*/
+}
+
+.container {
+  max-width: 1024px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.g-navi {
+  position: absolute;
+  background-color: #008000;
+  width: 100%;
+}
+
+.g-navi ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.g-navi ul li {
+  flex-basis: 20%;
+  text-align: center;
+}
+
+.g-navi ul li a {
+  display: block;
+  color: #fff;
+  padding: 20px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+#main-visual {
+  background-image: url(../image/enosima.jpg);
+  background-repeat: no-repeat;
+  /*背景画像は1度繰り返す*/
+  background-size: cover;
+  /*背景画像は縦横比は保持して、要素をちょうどよく覆うサイズに*/
+  height: 100vh;
+  max-height: 760px;
+}
+
+/* メインビジュアル */
+.mv-wrapper {
+  position: relative;
+  /*子要素にposition: absolute使うため適用*/
+  justify-content: center;
+  /*両端を基準に中央寄せ*/
+}
+
+.mv-right {
+  position: absolute;
+  /*.mv-wrapperを基準に位置設定*/
+  top: 200px;
+  left: 10px;
+  max-width: 100%;
+}
+
+.container {
+  position: relative;
+}
+
+
+
+h1 {
+  font-family: 'fantasy',serif;
+  /*総称フォントもゴシック系で指定*/
+  font-size: 5rem;
+  letter-spacing: 15px;
+  color: #000080;
+  font-weight: bold;
+  text-shadow: 10px 5px 4px #fff;
+  filter: drop-shadow(4px 2px 4px #fff);
+}
+
+.text {
+  font-family: 'fantasy', serif;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  color: #000080;
+  filter: drop-shadow(4px 2px 4px #fff);
+  text-shadow: 0px 0px 4px #fff;
+  text-align: center;
+}
